@@ -4,6 +4,9 @@ cmake_minimum_required(VERSION 2.8.0 FATAL_ERROR)
 project(Hybrid)
 
 find_package(MPI REQUIRED)
+
+include_directories(${MPI_C_INCLUDE_PATH})
+
 find_package(OpenMP REQUIRED)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
